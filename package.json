@@ -1,0 +1,36 @@
+{
+    "name": "ken",
+    "version": "0.0.0",
+    "description": "Just a simple Node.JS web application framework",
+    "author": "Meo <meo@arvernorix.com> (http://arvernorix.com)",
+    "contributors": [
+        "Meo <meo@arvernorix.com> (http://arvernorix.com)"
+    ],
+    "keywords": [
+        "web",
+        "framework"
+    ],
+    "licenses": [{
+        "type": "MIT",
+        "url": "http://en.wikipedia.org/wiki/MIT_License"
+    }],
+    "dependencies": {},
+    "devDependencies": {},
+    "main": "./lib/index.js",
+    "preferGlobal": "true",
+    "bin": "./bin/cli.js",
+    "scripts": {
+      "test": "grunt test"
+    },
+    "engines": [{
+        "node": ">= 0.10.0"
+    }],
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/arvernorix/ken.git"
+    },
+    "readmeFilename": "README.md",
+    "bugs": {
+        "url": "https://github.com/arvernorix/ken/issues"
+    }
+}
