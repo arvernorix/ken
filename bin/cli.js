@@ -5,11 +5,12 @@
 var ken = require('../lib/ken');
 ken.start()
     .done(
-        function () {
-            console.info('Initialized successfully.', ken);
+        function startedSuccessfully() {
+            (ken.isMaster ? ken.notice : ken.info).call(ken, 'Meow');
         },
-        function (err) {
-            console.error('Error occurred while initializing Ken!');
+        function failedToStart(err) {
+            (ken.error ? ken.error : console.error)
+                .call(ken, 'Error occurred while starting Ken!', err);
             throw err;
         }
     );
