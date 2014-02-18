@@ -7,11 +7,17 @@ var path = require('path'),
 module.exports = function (done) {
 
     var testDir = __dirname,
-
-        mocha = new Mocha,
         testFiles = [],
 
-        t = shien.traverse(testDir, { match: /\.js$/ });
+        thisFile = path.basename(__filename),
+        ignore = '^' + thisFile + '$',
+
+        mocha = new Mocha,
+
+        t = shien.traverse(testDir, {
+            ignore: ignore,
+            match: /\.js$/
+        });
 
     t.on('file', function (file) {
         testFiles.push(path.join(testDir, file));

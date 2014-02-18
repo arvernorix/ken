@@ -3,6 +3,7 @@
 'use strict';
 
 var ken = require('../lib/ken');
+
 ken.start()
     .done(
         function startedSuccessfully() {
