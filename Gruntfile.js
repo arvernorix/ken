@@ -3,7 +3,9 @@
 module.exports = function (grunt) {
 
     // Load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('matchdep')
+        .filterDev('grunt-*')
+        .forEach(grunt.loadNpmTasks);
 
     grunt.initConfig({
         jshint: {
@@ -11,7 +13,7 @@ module.exports = function (grunt) {
                 jshintrc: '.jshintrc'
             },
             all: [
-                '{bin,lib,test}/{,*/}*.js',
+                '{bin,lib,test}/**/*.js',
                 'Gruntfile.js'
             ]
         }

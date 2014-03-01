@@ -14,7 +14,7 @@ module.exports = function (done) {
 
         mocha = new Mocha,
 
-        t = shien.traverse(testDir, {
+        t = shien.file.traverse(testDir, {
             ignore: ignore,
             match: /\.js$/
         });
